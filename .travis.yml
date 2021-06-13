@@ -5,8 +5,13 @@ language: java
 jdk:
  - openjdk11
  
- after_success:
-  - bash <(curl -s https://codecov.io/bash)
+after_success:
+ - bash <(curl -s https://codecov.io/bash)
+  
+env:
+ global:
+   - CODECOV_TOKEN='0a588ff6-d02e-4ae9-9993-7b6289821ff0'
+
 
 notifications:
  email:
